@@ -1,21 +1,19 @@
-// interesting jquery import thanks to babel
 import $ from 'jquery';
-// import lodash
 import _ from 'lodash';
 
-// append elements
-$('body').append(`<p>Holberton Dashboard</p>`);
-$('body').append(`<p>Dashboard data for the students</p>`);
-$('body').append(`<button>Click here to get started</button>`);
-$('body').append(`<p id="count"></p>`);
-$('body').append(`<p>Copyright - Holberton School</p>`);
+$('body').append('<p>Holberton Dashboard</p>');
+$('body').append('<p>Dashboard data for the students</p>');
+$('body').append('<button>Click here to get started</button>');
+$('body').append("<p id='count'></p>");
+$('body').append("<p>Copyright - Holberton School</p>");
 
-// bind lodash's debounce to the button
-$('button').on('click', _.debounce(updateCounter, 500));
-
-let count  = 0;
-// function to update the counter
+let count = 0;
 function updateCounter() {
-	count++;
-	$('#count').text(`${count} clicks on the button`);
+    //increment the count by 1
+    count += 1;
+
+    // Update the paragraph element with the new count
+    $('#count').text(`${count} clicks on the button`);
 }
+
+$('button').on('click', _.debounce(updateCounter, 500));

@@ -1,43 +1,49 @@
-#### what is jest
+## 0x06. React state
 
-    Jest is a JavaScript testing framework that is widely used to test JavaScript applications, including React applications. It was created by Facebook and is open source. Jest provides a comprehensive testing solution with a focus on simplicity, ease of use, and speed. It includes features such as test runners, assertion libraries, mocking capabilities, and coverage reporting. Jest is commonly used for unit testing, integration testing, and end-to-end testing. It is built on top of the Jasmine testing framework and extends its capabilities to provide a more powerful and flexible testing experience. Jest is often used together with other testing tools like Enzyme or React Testing Library to test React components.
+### :open_file_folder: Specializations - Web Stack programming ― Back-end
 
-#### what is jest.restoreAllMocks
 
-    jest.restoreAllMocks() is a method provided by the Jest testing framework that restores all previously mocked functions that were created using jest.spyOn(), jest.fn(), or similar methods to their original implementation.
+<p align="center">
+    <img src="https://www.codeleaks.io/wp-content/uploads/2021/04/imgpsh_fullsize_anim.jpg" alt="Component React">
+</p>
 
-    When mocking a function, Jest replaces the original implementation with a mock implementation, which allows you to track and control its behavior during tests. However, in some cases, you may need to restore the original implementation to its initial state, so that it behaves as expected in other tests.
+## :closed_book: Resources
 
-    jest.restoreAllMocks() is a convenient way to restore all mocked functions at once, without having to restore each function individually. It is usually called at the end of a test suite or test case to clean up any mocked functions that were created during the test.
+* [State and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+* [SetState and State callback](https://reactjs.org/docs/react-component.html#setstate)
+* [Context](https://reactjs.org/docs/context.html)
+* [Forms and Controlled components](https://reactjs.org/docs/forms.html)
+* [Lifting State Up](https://reactjs.org/docs/lifting-state-up.html)
+* [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+* [Enzyme State](https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/state.html)
+* [Enzyme SetState](https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/setState.html)
+* [Enzyme Instance](https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/instance.html)
+* [Enzyme Simulate](https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/simulate.html)
 
-#### what is .not.toHaveBeenCalled()
 
-    .not.toHaveBeenCalled() is a Jest matcher that is used to verify that a mock function has not been called during a test. It is used in conjunction with the expect() function to assert that a specific function has not been called during a test.
+## :bulb: Learning Objectives
+At the end of this project, you are expected to be able to explain to anyone, **without the help of Google:**
 
-    For example, expect(handleDisplayDrawer).not.toHaveBeenCalled() is used in the first test case provided to assert that the handleDisplayDrawer function has not been called when a user clicks on a button. If the handleDisplayDrawer function is called during the test, the assertion will fail, and Jest will display an error message indicating that the function was called when it was not expected to be called.
+* What the state of a component or a container is
+* The lifecycle of a component
+* How to modify a state and execute code in the right order
+* What a controlled component is
+* How to use Forms in React
+* How to reuse smaller components, keep them pure, and lift its state to principal containers
+* The use of a React Hook and how to create one
+* How to test State changes with Enzyme
 
-    In general, Jest matchers are used to test the behavior of functions, objects, and components during tests. They allow you to write clear and concise assertions about the behavior of your code, making it easier to identify and fix issues in your application.
+## :black_nib: Author
 
-#### what is .toHaveBeenCalled()
+**Diahan Hudgson** 
 
-    .toHaveBeenCalled() is a Jest matcher that is used to verify that a mock function has been called during a test. It is used in conjunction with the expect() function to assert that a specific function has been called at least once during a test.
+## :mag: Where can you find me?
 
-    For example, expect(handleDisplayDrawer).toHaveBeenCalled() is used in the first test case provided to assert that the handleDisplayDrawer function has been called when a user clicks on a specific menu item. If the handleDisplayDrawer function is not called during the test, the assertion will fail, and Jest will display an error message indicating that the function was not called when it was expected to be called.
-
-    In general, Jest matchers are used to test the behavior of functions, objects, and components during tests. They allow you to write clear and concise assertions about the behavior of your code, making it easier to identify and fix issues in your application.
-
-#### What is the meaning of the code
-    beforeEach(() => {
-    StyleSheetTestUtils.suppressStyleInjection();
-    });
-    afterEach(() => {
-    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
-    });
-
-    This code is defining two Jest hooks, beforeEach() and afterEach(), that are used to configure the StyleSheetTestUtils object provided by the react-native library for testing purposes.
-
-    The beforeEach() hook is called before each test in the test suite, and it calls the suppressStyleInjection() method of the StyleSheetTestUtils object. This method prevents the StyleSheet module of the react-native library from injecting styles into the DOM during tests. This is important because it can interfere with the rendering and testing of components in a React Native application.
-
-    The afterEach() hook is called after each test in the test suite, and it calls the clearBufferAndResumeStyleInjection() method of the StyleSheetTestUtils object. This method clears the style injection buffer and resumes style injection for subsequent tests. This is necessary because the suppressStyleInjection() method persists between tests, so it needs to be reset after each test to avoid interference with subsequent tests.
-
-    Together, these hooks ensure that the StyleSheet module of the react-native library does not interfere with the testing of React Native components in the test suite, by suppressing style injection during tests and resuming it after each test.
+<p align="center">
+<a href="https://twitter.com/diacaroll" target="_blank">
+    <img src="https://img.icons8.com/bubbles/100/000000/twitter.png"/ alt="twitter:diahan-hudgson"></a>
+<a href="https://www.linkedin.com/in/diahan-hudgson/" target="_blank">
+    <img src="https://img.icons8.com/bubbles/100/000000/linkedin.png"/ alt="linkedin:diahan-hudgson"></a>
+<a href="https://diahancaroll.vercel.app/" target="_blank">    
+    <img src="https://img.icons8.com/bubbles/100/000000/web.png"/ alt="website:diahan-hudgson"></a>
+</p>
